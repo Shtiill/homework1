@@ -24,7 +24,7 @@
 </head>
 
 <?php 
-	$name = Алексей;
+	$name = 'Алексей';
 	$age = 24;
 	$mail = 'sevinkgr@gmail.com';
 	$sity = 'Севастополь';
