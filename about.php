@@ -27,7 +27,7 @@
 	$name = 'Алексей';
 	$age = 24;
 	$mail = 'sevinkgr@gmail.com';
-	$sity = 'Севастополь';
+	$city = 'Севастополь';
 	$about = 'Учусь кодить на PHP';
 ?>
 
@@ -47,7 +47,7 @@
         </dl>
         <dl>
             <dt>Город</dt>
-            <dd><?php echo $sity ?></dd>
+            <dd><?php echo $city ?></dd>
         </dl>
         <dl>
             <dt>О себе</dt>
