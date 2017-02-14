@@ -1,0 +1,65 @@
+<?php
+
+$Extinct_animals = array(
+		Australia => array('Tetragraptus fruticosus', 'Meiolania'), 
+		Asia => array('Monachus tropicalis', 'Columba jouyi'), 
+		South_America => array('Thylacosmilus riggs', 'Podiceps andinus', 'Dusicyon australis'),
+		North_America => array('Conuropsis carolinensis', 'Amazona martinicana'),
+		Africa => array('Mascarenotus sauzieri', 'Prorastomidae', 'Equus quagga', 'Erythromachus leguati', 'Panthera leo')
+);
+
+foreach ($Extinct_animals as $continent => $animal_name) // Вывод на экран исходного массива
+{
+	echo '<h2>' . $continent . '</h2>';
+	foreach ($animal_name as $value)
+	{
+		echo "$value <br/>";
+	}
+}
+
+$two_word_name = array();   // Создаем пустые массивы для дальнейшего использования
+$first_word = array();      //
+$second_word = array();     //
+$new_animal_name = array(); //
+
+foreach ($Extinct_animals as $continent => $animal_name) // Находим названия животных, в которых только 2 слова
+{
+	foreach ($animal_name as $value)
+	{
+		if (strpos($value, ' '))
+		{
+			$two_word_name[] = $value; // Записываем их в массив
+		}
+	}
+}
+
+foreach ($two_word_name as $continent => $value) // Вырезаем только певрое слово из названия
+{
+	$value = substr($value, 0, strpos($value, ' '));
+	$first_word[] = $value; // Сохраняем его в массив
+	
+}
+
+foreach ($two_word_name as $value) // Вырезаем второе слово
+{
+	$value = substr($value, strpos($value, ' '));
+	$second_word[] = $value; // Сохраняем его в массив
+}
+
+shuffle($first_word); // Перемешиваем оба массива
+shuffle($second_word); //
+
+for ($i = 0; $i < count($two_word_name); $i++) // Создаем фантазийное животное из двух слов
+{
+	$new_animal_name[] = array_shift($first_word) . array_shift($second_word); // Вырезаем из массивов первые значения, чтобы не было повторов. И они рандомные из-за перемешивания. Объединяем два слова.
+}
+
+echo "<br/>";
+echo "<h4> Fantastic animals: </h4>";
+
+foreach ($new_animal_name as $value) // Вывели их на экран
+{
+	echo "$value <br/>"; 
+}
+
+?> 
