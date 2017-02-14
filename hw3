@@ -8,15 +8,6 @@ $Extinct_animals = array(
 		Africa => array('Mascarenotus sauzieri', 'Prorastomidae', 'Equus quagga', 'Erythromachus leguati', 'Panthera leo')
 );
 
-foreach ($Extinct_animals as $continent => $animal_name) // Вывод на экран исходного массива
-{
-	echo '<h2>' . $continent . '</h2>';
-	foreach ($animal_name as $value)
-	{
-		echo "$value <br/>";
-	}
-}
-
 $two_word_name = array();   // Создаем пустые массивы для дальнейшего использования
 $first_word = array();      //
 $second_word = array();     //
@@ -37,7 +28,6 @@ foreach ($two_word_name as $continent => $value) // Вырезаем тольк�
 {
 	$value = substr($value, 0, strpos($value, ' '));
 	$first_word[] = $value; // Сохраняем его в массив
-	
 }
 
 foreach ($two_word_name as $value) // Вырезаем второе слово
@@ -46,7 +36,7 @@ foreach ($two_word_name as $value) // Вырезаем второе слово
 	$second_word[] = $value; // Сохраняем его в массив
 }
 
-shuffle($first_word); // Перемешиваем оба массива
+shuffle($first_word);  // Перемешиваем оба массива
 shuffle($second_word); //
 
 for ($i = 0; $i < count($two_word_name); $i++) // Создаем фантазийное животное из двух слов
@@ -54,7 +44,6 @@ for ($i = 0; $i < count($two_word_name); $i++) // Создаем фантази�
 	$new_animal_name[] = array_shift($first_word) . array_shift($second_word); // Вырезаем из массивов первые значения, чтобы не было повторов. И они рандомные из-за перемешивания. Объединяем два слова.
 }
 
-echo "<br/>";
 echo "<h4> Fantastic animals: </h4>";
 
 foreach ($new_animal_name as $value) // Вывели их на экран
