@@ -1,0 +1,37 @@
+[
+	{
+  		"firstName": "Иван",
+ 		"lastName": "Иванов",
+ 		"address": 
+ 			{
+       			"streetAddress": "Московское ш. 101, кв.101",
+      			"city": "Ленинград",
+       			"postalCode": 101101
+   			},
+  		"phoneNumber": "812 123-1234"
+	}, 
+
+	{
+  		"firstName": "Дарья",
+ 		"lastName": "Воронина",
+ 		"address": 
+ 			{
+       			"streetAddress": "Цветастая 7, кв.12",
+      			"city": "Воронеж",
+       			"postalCode": 234879
+   			},
+  		"phoneNumber": "806 654-4321"
+	},
+
+	{
+  		"firstName": "Кристина",
+ 		"lastName": "Светлова",
+ 		"address": 
+ 			{
+       			"streetAddress": "Просторная 5, кв.43",
+      			"city": "Краснодар",
+       			"postalCode": 579421
+   			},
+  		"phoneNumber": "915 634-8217"
+	}
+]
